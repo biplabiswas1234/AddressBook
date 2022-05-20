@@ -1,0 +1,14 @@
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\bin\Debug\netcoreapp3.1\ContactDetails.exe
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\bin\Debug\netcoreapp3.1\ContactDetails.deps.json
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\bin\Debug\netcoreapp3.1\ContactDetails.runtimeconfig.json
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\bin\Debug\netcoreapp3.1\ContactDetails.runtimeconfig.dev.json
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\bin\Debug\netcoreapp3.1\ContactDetails.dll
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\bin\Debug\netcoreapp3.1\ContactDetails.pdb
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.csproj.AssemblyReference.cache
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.AssemblyInfoInputs.cache
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.AssemblyInfo.cs
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.csproj.CoreCompileInputs.cache
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.dll
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.pdb
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBook\AddressBook\ContactDetails\obj\Debug\netcoreapp3.1\ContactDetails.genruntimeconfig.cache
