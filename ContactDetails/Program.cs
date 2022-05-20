@@ -11,6 +11,7 @@ namespace ContactAdd
             ContactAddress contactAddress = new ContactAddress();
 
             contactAddress.Addition();
+            contactAddress.ViewWage();
         }
     }
 }
