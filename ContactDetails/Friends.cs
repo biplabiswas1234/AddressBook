@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AddressBook
 {
-    internal class Office
+    internal class Friends
     {
         ArrayList personlist = new ArrayList();
 
@@ -46,7 +46,7 @@ namespace AddressBook
 
 
 
-        public void OfficeView()
+        public void FriendsView()
         {
             int j = 0;
             int count = 1;
@@ -77,7 +77,7 @@ namespace AddressBook
                 Console.WriteLine("Your Book is Empty");
             }
         }
-        public void EditOffice()
+        public void EditFriends()
         {
             if (personlist.Count > 0)
             {
@@ -90,7 +90,7 @@ namespace AddressBook
                 {
                     if (String.Equals(FirstNamee, (personlist[i])) && string.Equals(LastNamee, (personlist[i + 1])))
                     {
-
+                        //Console.WriteLine("Name:" + personlist + "==" + personlist[i]);
                         Console.WriteLine("Press 1: for first name");
                         Console.WriteLine("Press 2: for last name name");
                         Console.WriteLine("Press 3: for city name");
@@ -144,10 +144,10 @@ namespace AddressBook
                     }
                 }
             }
-
-            else
+           
+            else 
             {
-                Console.WriteLine("Sorry Your Book is Empty");
+            Console.WriteLine("Sorry Your Book is Empty");
             }
 
         }
@@ -174,6 +174,9 @@ namespace AddressBook
 
             }
         }
-    } 
-}
+    }
+} 
+
+
+
 
