@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\ContactDetails\\ContactDetails.csproj",
-      "projectName": "ContactDetails",
-      "projectPath": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\ContactDetails\\ContactDetails.csproj",
+      "projectUniqueName": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\ContactDetails\\ContactAdd.csproj",
+      "projectName": "ContactAdd",
+      "projectPath": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\ContactDetails\\ContactAdd.csproj",
       "packagesPath": "C:\\Users\\bipbi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\ContactDetails\\obj\\",
       "projectStyle": "PackageReference",
