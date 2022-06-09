@@ -1,6 +1,8 @@
-﻿using System;
+﻿using AddressAD;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AddressBook
@@ -8,6 +10,7 @@ namespace AddressBook
     internal class Office
     {
         ArrayList personlist = new ArrayList();
+        List<Contacts> ContactLists = new List<Contacts>();
 
         public void Addition()
         {
@@ -32,6 +35,8 @@ namespace AddressBook
                 string PhoneNum = Console.ReadLine();
                 Console.WriteLine("Enter your Email ID");
                 string EmailID = Console.ReadLine();
+                Contacts contacts = new Contacts(First_Name, Last_Name, City, State, EmailID, ZIP, PhoneNum);
+                ContactLists.Add(contacts);
                 personlist.Add(First_Name);
                 personlist.Add(Last_Name);
                 personlist.Add(City);
@@ -174,6 +179,99 @@ namespace AddressBook
 
             }
         }
-    } 
+        public void SearchCity()
+        {
+            Console.WriteLine("Enter city name");
+            string cityName = Console.ReadLine();
+            int count = 0;
+            for (int i = 2; i < personlist.Count; i += 7)
+            {
+                if (String.Equals(cityName, (personlist[i])))
+
+                {
+                    count++;
+                    Console.WriteLine("\n");
+                    Console.WriteLine("\nPerson number:" + count);
+                    Console.WriteLine("First Name: " + personlist[i - 2]);
+                    Console.WriteLine("Last Name: " + personlist[i - 1]);
+                    Console.WriteLine("City Name: " + personlist[i]);
+                    Console.WriteLine("State Name: " + personlist[i + 1]);
+                    Console.WriteLine("ZIP Number:" + personlist[i + 2]);
+                    Console.WriteLine("Phone Number:" + personlist[i + 3]);
+                    Console.Write("Email ID:" + personlist[i + 4]);
+
+                }
+
+
+            }
+            if (count == 0)
+            {
+                Console.WriteLine("Not available");
+            }
+        }
+
+        public void SearchPerson(string City)
+        {
+            var result = ContactLists.FindAll(r => r.City == City);
+            Console.WriteLine("Details of people who live in city: ");
+            foreach (var item in result)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                     " " + "\nCity :" + item.City + " " +
+                                    "\nState :" + item.State + " " + "\nEmail :" + item.Email + " " +
+                                    "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
+        public void ViewByState()
+        {
+            Console.WriteLine("Enter state name");
+            string State = Console.ReadLine();
+            var result = ContactLists.FindAll(r => r.State == State);
+            Console.WriteLine("Details of people who live in state :");
+            foreach (var item in result)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                  "\nEmail ID :" + item.Email + " " +
+                                  "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                  "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
+        public int Countperson()
+        {
+            Console.WriteLine("Count Person-City and state wise:");
+            Console.WriteLine("Enter City");
+            string City = Console.ReadLine();
+            Console.WriteLine("Enter state");
+            string State = Console.ReadLine();
+            var result = ContactLists.FindAll(r => (r.City == City && r.State == State));
+            foreach (var item in result)
+            {
+
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                   "\nEmail ID :" + item.Email + " " + "\nAddress :" +
+                                   "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                   "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+            var results = result.Count;
+            Console.WriteLine($"Total Persons in City: {City} & State: {State}: are " + results);
+            return results;
+        }
+        public void SortByPersonName()
+        {
+            var Sort = ContactLists.OrderBy(r => r.FirstName).ToList();
+            foreach (var item in Sort)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                 "\nEmail ID :" + item.Email + " " +
+                                 "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                 "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
+
+    }
 }
 
