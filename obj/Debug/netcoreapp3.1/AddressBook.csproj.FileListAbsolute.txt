@@ -1,0 +1,14 @@
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.exe
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.deps.json
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.runtimeconfig.json
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.runtimeconfig.dev.json
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.dll
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\bin\Debug\netcoreapp3.1\AddressBook.pdb
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.csproj.AssemblyReference.cache
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.AssemblyInfoInputs.cache
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.AssemblyInfo.cs
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.csproj.CoreCompileInputs.cache
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.dll
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.pdb
+C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressBookRepo\AddressBook\obj\Debug\netcoreapp3.1\AddressBook.genruntimeconfig.cache

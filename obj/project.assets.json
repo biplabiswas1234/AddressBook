@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\ContactDetails.csproj",
-      "projectName": "ContactDetails",
-      "projectPath": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\ContactDetails.csproj",
+      "projectUniqueName": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBookRepo\\AddressBook\\AddressBook.csproj",
+      "projectName": "AddressBook",
+      "projectPath": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBookRepo\\AddressBook\\AddressBook.csproj",
       "packagesPath": "C:\\Users\\bipbi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBook\\AddressBook\\obj\\",
+      "outputPath": "C:\\Users\\bipbi\\OneDrive\\Desktop\\Bridgelabz\\PracticeRFP\\AddressBookRepo\\AddressBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bipbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
