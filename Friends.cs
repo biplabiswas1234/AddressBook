@@ -1,7 +1,10 @@
 ﻿using AddressAD;
+using CsvHelper;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -267,6 +270,80 @@ namespace AddressBook
                                  "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
                                  "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
                 Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
+        public void SortByCityName()
+        {
+            var Sort = ContactLists.OrderBy(r => r.City).ToList();
+            foreach (var item in Sort)
+            {
+                Console.WriteLine("First Name :" + item.FirstName + " " + "\nLast Name :" + item.LastName + " " +
+                                 "\nEmail ID :" + item.Email + " " +
+                                 "\nCity Name :" + item.City + " " + "\nState Name :" + item.State + " " +
+                                 "\nZip Code :" + item.Zip + " " + "\nPhoneNumber :" + item.PhoneNumber);
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
+        public void Remove()
+        {
+            Console.WriteLine("Enter first name");
+            string FirstName = Console.ReadLine();
+            Console.WriteLine("Enter last name");
+            string LastName = Console.ReadLine();
+            var result = ContactLists.RemoveAll(r => (r.FirstName == FirstName && r.LastName == LastName));
+            int count = 1;
+            foreach (Contacts person in ContactLists)
+            {
+                Console.WriteLine("\n");
+                Console.WriteLine("\nAddress of person number: " + count);
+                Console.WriteLine("First name: " + person.FirstName);
+                Console.WriteLine("Last name: " + person.LastName);
+                Console.WriteLine("Email id: " + person.Email);
+                Console.WriteLine("City name: " + person.City);
+                Console.WriteLine("State name: " + person.State);
+                Console.WriteLine("ZIP name: " + person.Zip);
+                Console.WriteLine("Phone number: " + person.PhoneNumber);
+                count++;
+
+            }
+        }
+        public void ContactDetailsInFile()
+        {
+            string Write = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressAD\PersonName.txt";
+            using (StreamWriter streamWriter = File.AppendText(Write))
+            {
+                foreach (var item in ContactLists)
+                {
+                    streamWriter.WriteLine(item);
+                }
+                streamWriter.Close();
+            }
+            Console.WriteLine("\n");
+            string InputFile = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressAD\PersonName.txt";
+            string file = File.ReadAllText(InputFile);
+            Console.WriteLine(file);
+        }
+        public void WriteAndReadCSVFile()
+        {
+            string FilePath = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\CsvFile\CsvFile\FriendContactDetails.csv";
+            using (var writer = new StreamWriter(FilePath))
+            using (CsvWriter csvWriter = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csvWriter.WriteHeader<Contacts>();
+                foreach (var contact in ContactLists)
+                {
+                    csvWriter.NextRecord();
+                    csvWriter.WriteRecord(contact);
+                }
+            }
+            using (TextReader reader = new StreamReader(FilePath))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var records = csv.GetRecords<Contacts>().ToList();
+                foreach (Contacts contacts in records)
+                {
+                    Console.WriteLine(contacts);
+                }
             }
         }
 

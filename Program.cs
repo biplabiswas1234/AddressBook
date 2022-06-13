@@ -37,6 +37,8 @@ namespace AddressBook
                             Console.WriteLine("8: Sort by Person name");
                             Console.WriteLine("9: Sort by city name");
                             Console.WriteLine("10: To write the name in txt file");
+                            Console.WriteLine("11: To write the name in csv file");
+
                             Console.WriteLine("0:Back");
                             {
                                 string option1 = Console.ReadLine();
@@ -77,6 +79,10 @@ namespace AddressBook
                                         case "10":
                                             family.ContactDetailsInFile();
                                             break;
+                                        case "11":
+                                            family.WriteAndReadCSVFile();
+                                            break;
+                                            
                                         default:
                                             Console.WriteLine("Please enter correct option");
                                             break;
@@ -102,6 +108,9 @@ namespace AddressBook
                             Console.WriteLine("6: Search by state name");
                             Console.WriteLine("7: Count person");
                             Console.WriteLine("8: Sort by Person name");
+                            Console.WriteLine("9: Sort by city name");
+                            Console.WriteLine("10: To write the name in txt file");
+                            Console.WriteLine("11: To write the name in csv file");
                             Console.WriteLine("0:Back");
                             {
                                 string option1 = Console.ReadLine();
@@ -136,6 +145,15 @@ namespace AddressBook
                                         case "8":
                                             friend.SortByPersonName();
                                             break;
+                                        case "9":
+                                            friend.SortByCityName();
+                                            break;
+                                        case "10":
+                                            friend.ContactDetailsInFile();
+                                            break;
+                                        case "11":
+                                            friend.WriteAndReadCSVFile();
+                                            break;
                                         default:
                                             Console.WriteLine("Please enter correct option");
                                             break;
@@ -164,6 +182,9 @@ namespace AddressBook
                             Console.WriteLine("6: Search by state name");
                             Console.WriteLine("7: Count person");
                             Console.WriteLine("8: Sort by Person name");
+                            Console.WriteLine("9: Sort by city name");
+                            Console.WriteLine("10: To write the name in txt file");
+                            Console.WriteLine("11: To write the name in csv file");
                             Console.WriteLine("0: Back");
                             {
                                 string option1 = Console.ReadLine();
@@ -197,6 +218,15 @@ namespace AddressBook
                                             break;
                                         case "8":
                                             office.SortByPersonName();
+                                            break;
+                                        case "9":
+                                            office.SortByCityName();
+                                            break;
+                                        case "10":
+                                            office.ContactDetailsInFile();
+                                            break;
+                                        case "11":
+                                            office.WriteAndReadCSVFile();
                                             break;
                                         default:
                                             Console.WriteLine("Please enter correct option");

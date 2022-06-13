@@ -1,7 +1,9 @@
 ﻿using AddressAD;
+using CsvHelper;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -40,7 +42,7 @@ namespace AddressBook
                 string EmailID = Console.ReadLine();
                 Contacts contacts = new Contacts(First_Name, Last_Name, City, State, EmailID, ZIP, PhoneNum);
                 ContactLists.Add(contacts);
-              
+
             }
 
         }
@@ -81,7 +83,7 @@ namespace AddressBook
         }
         public void Allperson()
         {
-            int count= 1;
+            int count = 1;
             foreach (Contacts person in ContactLists)
             {
                 Console.WriteLine("\n");
@@ -290,7 +292,7 @@ namespace AddressBook
         public void SearchPerson()
         {
             Console.WriteLine("Enter city");
-            string City=Console.ReadLine();
+            string City = Console.ReadLine();
             var result = ContactLists.FindAll(r => r.City == City);
             Console.WriteLine("Details of people who live in city: ");
             foreach (var item in result)
@@ -362,7 +364,7 @@ namespace AddressBook
                 Console.WriteLine("-------------------------------------------------------------------------");
             }
         }
-        
+
         public void Remove()
         {
             Console.WriteLine("Enter first name");
@@ -375,7 +377,7 @@ namespace AddressBook
             {
                 Console.WriteLine("\n");
                 Console.WriteLine("\nAddress of person number: " + count);
-                Console.WriteLine("First name: "+ person.FirstName);
+                Console.WriteLine("First name: " + person.FirstName);
                 Console.WriteLine("Last name: " + person.LastName);
                 Console.WriteLine("Email id: " + person.Email);
                 Console.WriteLine("City name: " + person.City);
@@ -401,6 +403,29 @@ namespace AddressBook
             string InputFile = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressAD\PersonName.txt";
             string file = File.ReadAllText(InputFile);
             Console.WriteLine(file);
+        }
+        public void WriteAndReadCSVFile()
+        {
+            string FilePath = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\CsvFile\CsvFile\FamilyContactDetails.csv";
+            using (var writer = new StreamWriter(FilePath))
+            using (CsvWriter csvWriter = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csvWriter.WriteHeader<Contacts>();
+                foreach (var contact in ContactLists)
+                {
+                    csvWriter.NextRecord();
+                    csvWriter.WriteRecord(contact);
+                }
+            }
+            using (TextReader reader = new StreamReader(FilePath))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var records = csv.GetRecords<Contacts>().ToList();
+                foreach (Contacts contacts in records)
+                {
+                    Console.WriteLine(contacts);
+                }
+            }
         }
     }
 }
