@@ -38,6 +38,7 @@ namespace AddressBook
                             Console.WriteLine("9: Sort by city name");
                             Console.WriteLine("10: To write the name in txt file");
                             Console.WriteLine("11: To write the name in csv file");
+                            Console.WriteLine("12: To write the name in json file");
 
                             Console.WriteLine("0:Back");
                             {
@@ -81,6 +82,9 @@ namespace AddressBook
                                             break;
                                         case "11":
                                             family.WriteAndReadCSVFile();
+                                            break;
+                                        case "12":
+                                            family.WriteAndReadJsonFile();
                                             break;
                                             
                                         default:
@@ -154,6 +158,7 @@ namespace AddressBook
                                         case "11":
                                             friend.WriteAndReadCSVFile();
                                             break;
+                                            
                                         default:
                                             Console.WriteLine("Please enter correct option");
                                             break;

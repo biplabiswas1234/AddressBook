@@ -1,5 +1,6 @@
 ﻿using AddressAD;
 using CsvHelper;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -406,7 +407,7 @@ namespace AddressBook
         }
         public void WriteAndReadCSVFile()
         {
-            string FilePath = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\CsvFile\CsvFile\FamilyContactDetails.csv";
+            string FilePath = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressAD\FamilyContactDetails.csv";
             using (var writer = new StreamWriter(FilePath))
             using (CsvWriter csvWriter = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
@@ -425,6 +426,47 @@ namespace AddressBook
                 {
                     Console.WriteLine(contacts);
                 }
+            }
+
+        }
+        public void WriteJsonFile()
+        {
+            string JsonPath = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressAD\FamilyContact.json";
+            string jsonData = JsonConvert.SerializeObject(ContactLists);
+            using (StreamWriter writer = new StreamWriter(JsonPath))
+            {
+                writer.Flush();
+                writer.Write(jsonData);
+                Console.WriteLine(jsonData);
+            }
+        }
+        public void ReadJsonFile()
+        {
+            string JsonPath = @"C:\Users\bipbi\OneDrive\Desktop\Bridgelabz\PracticeRFP\AddressAD\FamilyContact.json";
+            string result = File.ReadAllText(JsonPath);
+            var deserialise = JsonConvert.DeserializeObject<List<Contacts>>(result);
+            foreach (var contact in deserialise)
+            {
+                Console.WriteLine(contact);
+            }
+        }
+        public void WriteAndReadJsonFile()
+        {
+            Console.WriteLine("Choose The option for Write and Read File");
+            Console.WriteLine("1: For Write Json File");
+            Console.WriteLine("2: For Read Json File");
+            int option = int.Parse(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    WriteJsonFile();
+                    break;
+                case 2:
+                    ReadJsonFile();
+                    break;
+                default:
+                    Console.WriteLine("Choose Correct option");
+                    break;
             }
         }
     }
